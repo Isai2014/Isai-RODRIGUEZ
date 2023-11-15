@@ -1,0 +1,26 @@
+
+<html>
+<head>
+<script>
+function calcularHipotenusa() {
+  // Obtener los valores de los catetos del formulario
+  var a = document.getElementById("catetoA").value;
+  var b = document.getElementById("catetoB").value;
+  // Calcular la hipotenusa usando Math.hypot()
+  var c = Math.hypot(a, b);
+  // Mostrar el resultado en un elemento <p>
+  document.getElementById("resultado").innerHTML = "La hipotenusa es " + c;
+}
+</script>
+</head>
+<body>
+<h1>Calcular la hipotenusa de un triángulo rectángulo</h1>
+<form>
+  <p>Ingrese los valores de los catetos:</p>
+  <p>Cateto A: <input type="number" id="catetoA"></p>
+  <p>Cateto B: <input type="number" id="catetoB"></p>
+  <p><button type="button" onclick="calcularHipotenusa()">Calcular</button></p>
+</form>
+<p id="resultado"></p>
+</body>
+</html>
